@@ -11,6 +11,7 @@ nltk.download('stopwords')
 
 import plotly.express as px
 
+
 from transformers import AutoTokenizer, TFAutoModelForSequenceClassification
 
 from tensorflow.keras.optimizers import Adam
@@ -124,6 +125,7 @@ X_train, X_valid, y_train, y_valid = train_test_split(
     stratify=y_train,
     random_state=42
 )
+
 
 bert_name = "bert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(
